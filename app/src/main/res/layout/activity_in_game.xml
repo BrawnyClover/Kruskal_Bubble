@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/actionModeSplitBackground"
+    tools:context="com.sonbill.project.InGameActivity">
+
+    <LinearLayout
+        android:id="@+id/outerLinear"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reLoadButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/outerLinear"
+        android:onClick="reLoad"
+        android:text="Next" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="29dp"
+        android:gravity="center|right"
+        android:text="Time passed : "
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:id="@+id/textView3" />
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:gravity="center|left"
+        android:text="0"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_alignTop="@+id/textView3" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="Score     :"
+        android:textColor="@android:color/white"
+        android:layout_toStartOf="@+id/scoreView"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/timeView"
+        android:layout_alignBottom="@+id/timeView" />
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@android:color/white"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView2" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_below="@+id/outerLinear"
+        android:layout_toEndOf="@+id/timeView">
+
+        <TextView
+            android:id="@+id/textResultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:gravity="left"
+            android:textColor="@android:color/white" />
+    </ScrollView>
+</RelativeLayout>
